@@ -1,0 +1,186 @@
+# Project information
+site_name: Lei-Lab Knowledge Platform
+site_url: https://your-site-url.com/
+site_author: Lei-Lab Team
+site_description: >-
+  课题组知识共享平台，涵盖生物统计、线性代数等课程、
+  代码库文档、文献抄读、知识博客与课题组成员介绍。
+
+# Repository
+repo_name: your-github/biostatai
+repo_url: https://github.com/your-github/biostatai
+
+# Copyright
+copyright: Copyright &copy; 2024 - 2025 Lei-Lab Team. All rights reserved.
+
+# ============================================================
+# Theme
+# ============================================================
+theme:
+  name: material
+  language: zh
+  logo: assets/images/logo.svg
+  favicon: assets/images/logo.svg
+  custom_dir: overrides
+  features:
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.tooltips
+    - navigation.footer
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: 切换到浅色模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/toggle-switch
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/toggle-switch-off
+        name: 跟随系统设置
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+# ============================================================
+# Plugins
+# ============================================================
+plugins:
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - blog:
+      blog_dir: blog
+      post_date_format: long
+      post_url_format: "{date}/{slug}"
+      authors_file: blog/.authors.yml
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_source: true
+            show_root_heading: true
+            show_category_heading: true
+            heading_level: 3
+  - minify:
+      minify_html: true
+  - tags
+
+# ============================================================
+# Extra
+# ============================================================
+extra:
+  status:
+    new: 最近新增
+    deprecated: 已废弃
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/your-github/biostatai
+      name: GitHub
+
+# ============================================================
+# Markdown Extensions
+# ============================================================
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# ============================================================
+# Extra files
+# ============================================================
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+# ============================================================
+# Navigation
+# ============================================================
+nav:
+  - 首页: index.md
+
+  - 课程:
+    - courses/index.md
+    - 生物统计学:
+      - courses/biostatistics/index.md
+      - 符号检验: courses/biostatistics/01-sign-test.md
+      - t 检验: courses/biostatistics/02-t-test.md
+      - 方差分析: courses/biostatistics/03-anova.md
+    - 线性代数:
+      - courses/linear-algebra/index.md
+      - 矩阵基础: courses/linear-algebra/01-matrix.md
+      - 特征值与特征向量: courses/linear-algebra/02-eigenvalue.md
+
+  - 演示工具:
+    - tools/index.md
+    - 符号检验: tools/sign-test.md
+
+  - 代码库:
+    - codelib/index.md
+    - Python 工具集: codelib/python-utils.md
+    - R 脚本集: codelib/r-scripts.md
+    - API 参考: codelib/api-reference.md
+
+  - 文献抄读:
+    - journal-club/index.md
+    - 2025 年文献:
+      - journal-club/2025/index.md
+
+  - 博客:
+    - blog/index.md
+
+  - 课题组:
+    - team/index.md
+    - 成员介绍: team/members/index.md

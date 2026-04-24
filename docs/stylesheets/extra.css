@@ -1,0 +1,58 @@
+/* ===== 导航栏高度 ===== */
+.md-header__inner {
+    height: 160px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* ===== Logo 按钮容器 ===== */
+.md-header__button.md-logo {
+    padding: 4px !important;
+    margin-right: 12px !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+/* ===== Logo 图片/SVG 本体 ===== */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+    height: 150px !important;
+    width: 150px !important;
+    max-height: none !important;
+    max-width: none !important;
+    object-fit: unset !important;
+    overflow: visible !important;
+}
+
+/* ===== 标题字体 ===== */
+.md-header__title {
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+}
+
+/* ===== Tabs 和导航栏同色融合 ===== */
+.md-tabs {
+    background-color: var(--md-primary-fg-color) !important;
+}
+
+/* ===== Tabs 字体加大加粗 ===== */
+.md-tabs__link {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    opacity: 1 !important;
+}
+
+/* ===== Tabs 当前选中项下划线 ===== */
+.md-tabs__link--active {
+    border-bottom: 3px solid white !important;
+}
+
+/* ===== 首页 Grid Cards ===== */
+.md-typeset .grid.cards > ul > li {
+    border-radius: 8px;
+    transition: box-shadow 0.2s;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
