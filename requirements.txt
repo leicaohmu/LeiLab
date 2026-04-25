@@ -1,4 +1,4 @@
 mkdocs-material>=9.5
-mkdocstrings[python]>=0.24
+mkdocstrings[python]==0.25.2
 mkdocs-minify-plugin>=0.8
 mock

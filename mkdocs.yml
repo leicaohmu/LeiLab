@@ -58,8 +58,6 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-hooks:
-  - hooks.py
 # ============================================================
 # Plugins
 # ============================================================
@@ -82,6 +80,11 @@ plugins:
             docstring_style: google
             ignore_init_summary: false
             show_if_no_docstring: false
+          setup_commands:
+            - import sys
+            - from unittest.mock import MagicMock
+            - sys.modules['numpy'] = MagicMock()
+            - sys.modules['scipy'] = MagicMock()
           
   - minify:
       minify_html: true
