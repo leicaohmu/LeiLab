@@ -78,7 +78,6 @@ plugins:
             show_category_heading: true
             heading_level: 3
             docstring_style: google
-            ignore_init_summary: false
             show_if_no_docstring: false
           
   - minify:
