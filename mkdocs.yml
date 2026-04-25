@@ -26,7 +26,7 @@ theme:
     - content.code.annotate
     - content.code.copy
     - content.tooltips
-    - navigation.footer
+    # - navigation.footer
     - navigation.indexes
     - navigation.sections
     - navigation.tabs
@@ -78,6 +78,9 @@ plugins:
             show_root_heading: true
             show_category_heading: true
             heading_level: 3
+            docstring_style: google
+            ignore_init_summary: false
+            show_if_no_docstring: false
   - minify:
       minify_html: true
   - tags
@@ -170,6 +173,32 @@ nav:
     - Python 工具集: codelib/python-utils.md
     - R 脚本集: codelib/r-scripts.md
     - API 参考: codelib/api-reference.md
+    - histox:
+      - 简介: codelib/histox/index.md
+      - 数据处理:
+        - dataset: codelib/histox/dataset.md
+        - io: codelib/histox/io.md
+        - tfrecord: codelib/histox/tfrecord.md
+      - 模型与训练:
+        - model: codelib/histox/model.md
+        - mil: codelib/histox/mil.md
+      - 图像分析:
+        - slide: codelib/histox/slide.md
+        - segment: codelib/histox/segment.md
+        - cellseg: codelib/histox/cellseg.md
+        - heatmap: codelib/histox/heatmap.md
+        - mosaic: codelib/histox/mosaic.md
+      - 统计与工具:
+        - stats: codelib/histox/stats.md
+        - norm: codelib/histox/norm.md
+        - util: codelib/histox/util.md
+      - 项目管理:
+        - project: codelib/histox/project.md
+        - project_utils: codelib/histox/project_utils.md
+        - sample_actions: codelib/histox/sample_actions.md
+      - 其他:
+        - errors: codelib/histox/errors.md
+
 
   - 文献抄读:
     - journal-club/index.md

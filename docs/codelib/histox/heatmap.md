@@ -1,0 +1,3 @@
+# heatmap
+
+::: histox.heatmap

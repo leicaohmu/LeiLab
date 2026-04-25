@@ -1,3 +1,5 @@
 mkdocs-material>=9.5
 mkdocstrings[python]>=0.24
 mkdocs-minify-plugin>=0.8
+# 引入 histox 库（从 GitHub 安装）
+git+https://github.com/leicaohmu/histox.git@master

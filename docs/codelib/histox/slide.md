@@ -1,0 +1,3 @@
+# slide
+
+::: histox.slide

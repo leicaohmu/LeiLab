@@ -1,0 +1,3 @@
+# segment
+
+::: histox.segment
