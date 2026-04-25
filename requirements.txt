@@ -2,6 +2,4 @@ mkdocs-material>=9.5
 mkdocstrings[python]>=0.24
 mkdocs-minify-plugin>=0.8
 mock
-git+https://github.com/leicaohmu/histox.git@master
-scikit-learn==1.6.1
-scipy==1.13.1
+git+https://github.com/leicaohmu/histox.git@master --no-deps

@@ -81,6 +81,15 @@ plugins:
             docstring_style: google
             ignore_init_summary: false
             show_if_no_docstring: false
+          setup_commands:
+            - import sys
+            - from unittest.mock import MagicMock
+            - sys.modules['sklearn'] = MagicMock()
+            - sys.modules['scipy'] = MagicMock()
+            - sys.modules['torch'] = MagicMock()
+            - sys.modules['tensorflow'] = MagicMock()
+            - sys.modules['cv2'] = MagicMock()
+            - sys.modules['numpy'] = MagicMock()
   - minify:
       minify_html: true
   - tags
