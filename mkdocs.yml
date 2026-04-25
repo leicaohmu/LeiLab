@@ -26,7 +26,6 @@ theme:
     - content.code.annotate
     - content.code.copy
     - content.tooltips
-    # - navigation.footer
     - navigation.indexes
     - navigation.sections
     - navigation.tabs
@@ -58,6 +57,7 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
+
 # ============================================================
 # Plugins
 # ============================================================
@@ -67,12 +67,11 @@ plugins:
       default_handler: python
       handlers:
         python:
-          paths: [.]
+          paths: [vendor]   # ← 改这里，指向 submodule 目录
           options:
             docstring_style: google
             show_source: false
             preload_modules: []
-          
   - minify:
       minify_html: true
   - tags
@@ -190,7 +189,6 @@ nav:
         - sample_actions: codelib/histox/sample_actions.md
       - 其他:
         - errors: codelib/histox/errors.md
-
 
   - 文献抄读:
     - journal-club/index.md
