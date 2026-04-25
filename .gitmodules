@@ -1,0 +1,3 @@
+[submodule "vendor/histox"]
+	path = vendor/histox
+	url = https://github.com/leicaohmu/histox.git
