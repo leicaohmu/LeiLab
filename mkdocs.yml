@@ -62,23 +62,15 @@ theme:
 # Plugins
 # ============================================================
 plugins:
-  - search:
-      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-  - blog:
-      blog_dir: blog
-      post_date_format: long
-      post_url_format: "{date}/{slug}"
-      authors_file: blog/.authors.yml
+  - search
   - mkdocstrings:
+      default_handler: python
       handlers:
         python:
+          paths: [.]   # ← 把项目根目录加入 sys.path
           options:
-            show_source: true
-            show_root_heading: true
-            show_category_heading: true
-            heading_level: 3
             docstring_style: google
-            show_if_no_docstring: false
+            show_source: false
           
   - minify:
       minify_html: true
